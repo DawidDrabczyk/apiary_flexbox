@@ -186,7 +186,7 @@ body {
         flex-direction: column;
         margin: 2em 0;
     }
-    &__box-img{
+    &__img{
         width: 100%;
         margin-bottom: 1em;
     }
@@ -201,6 +201,33 @@ body {
 ///////////////////////////////////////////////
 //                 MEDIA                     //
 ///////////////////////////////////////////////
+
+@media(min-width:576px){
+    .description{
+        &__box{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &__box-text{
+            width: 55%;
+
+            &--right{
+                text-align: right;
+            }
+        }
+        &__box-img{
+            width: 40%;
+
+            &--right{
+                order: 1;
+            }
+        }
+        &__img{
+            margin-bottom: 0;
+            max-height: 300px;
+        }
+    }
+}
 
 @media(min-width:768px){
     .white-block{
@@ -218,6 +245,14 @@ body {
             font-size: 1.6rem;
         }
     }
+    .description{
+        &__title{
+            font-size: 2.5rem;
+        }
+        &__text{
+            font-size: 1.8rem;
+        }
+    }
 }
 
 @media(min-width:992px){
@@ -225,11 +260,33 @@ body {
         top: 50px;
         right: 50px;
     }
+    .nav{
+        &__item{
+            font-size: 4.8rem;
+        }
+    }
     .header{
         background-image: $main-gradient, url('../img/header-hero_1920.jpg');
 
         &__heading{
             font-size: 8rem;
+        }
+    }
+    .description{
+        &__box{
+            margin: 5em 0;
+        }
+        &__box-text{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            margin-bottom: 2.5em;
+        }
+        &__title{
+            font-size: 3.6rem;
+        }
+        &__text{
+            font-size: 2.2rem;
         }
     }
 }
