@@ -70,6 +70,68 @@ body {
 }
 
 ///////////////////////////////////////////////
+//                 NAV                       //
+///////////////////////////////////////////////
+
+.nav{
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: $main-gradient-solid;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    &--active{
+        transform: translateX(0);
+    }
+
+    &__item{
+        position: relative;
+        display: block;
+        margin: 0.5em 0;
+        padding: 0.5em 2em;
+        font-size: 2.8rem;
+        color: $text-color;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &::before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            content: '';
+            background-color: $text-color;
+            transform: scaleY(0);
+            transition: transform 0.5s;
+        }
+
+        &:hover::before{
+            transform: scaleY(1);
+        }
+    }
+}
+
+.navItemAnimation{
+    animation: navAnimation 1s both;
+}
+
+@keyframes navAnimation {
+    from{
+        transform: translateX(200%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+///////////////////////////////////////////////
 //                 HEADER                    //
 ///////////////////////////////////////////////
 

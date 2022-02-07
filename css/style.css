@@ -129,6 +129,92 @@ body {
   transition: width 0.5s;
 }
 
+.nav {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(45deg, #fffb00, #e7d800);
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav--active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.nav__item {
+  position: relative;
+  display: block;
+  margin: 0.5em 0;
+  padding: 0.5em 2em;
+  font-size: 2.8rem;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav__item::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  content: '';
+  background-color: #000000;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.nav__item:hover::before {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+.navItemAnimation {
+  -webkit-animation: navAnimation 1s both;
+          animation: navAnimation 1s both;
+}
+
+@-webkit-keyframes navAnimation {
+  from {
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes navAnimation {
+  from {
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
 .header {
   position: relative;
   display: -webkit-box;
