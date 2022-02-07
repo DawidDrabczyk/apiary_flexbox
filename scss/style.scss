@@ -1,71 +1,115 @@
-@import './colors';
-@import './components';
-@import './mixins';
+@import "./colors";
+@import "./components";
+@import "./mixins";
 
 * {
 	box-sizing: border-box;
 	padding: 0;
-    margin: 0;
+	margin: 0;
 }
 
 html {
 	font-size: 62.5%;
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
-    font-size: 1.6rem;
-    font-family: "Roboto", sans-serif;
-	// font-family: "Quintessential", cursive;
+	font-size: 1.6rem;
+	font-family: "Roboto", sans-serif;
 }
 
 ///////////////////////////////////////////////
 //                 BURGER BTN                //
 ///////////////////////////////////////////////
 
-.burger-btn{
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 1em;
-    background-color: none;
-    border: 1px solid transparent;
-    cursor: pointer;
-    z-index: 1000;
+.burger-btn {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	padding: 1em;
+	background: none;
+	border: 1px solid transparent;
+	cursor: pointer;
+	z-index: 1000;
 
-    &:hover{
-        .burger-btn__bars,
-        .burger-btn__bars::before,
-        .burger-btn__bars::after{
-            width: 100%;
-        }
+	&:hover {
+		.burger-btn__bars,
+		.burger-btn__bars::before,
+		.burger-btn__bars::after {
+			width: 100%;
+		}
+	}
+
+	&:focus {
+		outline: none;
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		border-radius: 15px;
+	}
+	&__box {
+		position: relative;
+		width: 40px;
+		height: 30px;
+	}
+	&__bars {
+		width: 100%;
+
+		&::after {
+			top: 13px;
+			width: 60%;
+		}
+		&::before {
+			top: 27px;
+			width: 30%;
+		}
+	}
+	&__bars,
+	&__bars::before,
+	&__bars::after {
+		@include burgerBtnSet;
+	}
+}
+
+///////////////////////////////////////////////
+//                 HEADER                    //
+///////////////////////////////////////////////
+
+.header {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 2em;
+	height: 75vh;
+	text-align: center;
+	color: $text-color;
+	@include heroImages("../img/header-hero_640.jpg");
+	background-attachment: scroll;
+
+	&__heading {
+		font-family: "Quintessential", cursive;
+        font-size: 4.8rem;
+        letter-spacing: 4px;
+	}
+    &__text{
+        margin-top: 1em;
+        font-size: 1.4rem;
     }
-
-    &:focus{
-        outline: none;
-        border: 1px solid rgba(255, 255, 255, 0.5);
+    &__btn{
+        margin-top: 2em;
+        padding: 0.8em 1.6em;
+        font-size: 1.4rem;
+        background-color: $white;
+        border: none;
         border-radius: 15px;
-    }
-    &__box{
-        position: relative;
-        width: 40px;
-        height: 30px;
-    }
-    &__bars{
-        width: 100%;
-        
-        &::after{
-            top: 13px;
-            width: 60%;
-        }
+        color: $text-color;
+        text-decoration: none;
+        text-transform: uppercase;
+        cursor: pointer;
+
         &::before{
-            top: 27px;
-            width: 30%;
+            color: $white;
+            background-color: $light-text-color;
         }
-    }
-    &__bars,
-    &__bars::before,
-    &__bars::after{
-        @include burgerBtnSet;
     }
 }

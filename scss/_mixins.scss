@@ -3,6 +3,13 @@
     right: 0;
     height: 3px;
     content: '';
-    background-color: $white;
+    background-color: $text-color;
     transition: width 0.5s;
+}
+
+@mixin heroImages($heroImg){
+    background-image: $main-gradient, url($heroImg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
