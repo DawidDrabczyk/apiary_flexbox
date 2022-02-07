@@ -1,0 +1,8 @@
+@mixin burgerBtnSet {
+    position: absolute;
+    right: 0;
+    height: 3px;
+    content: '';
+    background-color: $white;
+    transition: width 0.5s;
+}
