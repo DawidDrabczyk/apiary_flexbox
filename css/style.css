@@ -487,6 +487,71 @@ body {
   background-color: #3F5DFF;
 }
 
+.aboutus {
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(45deg, rgba(117, 116, 11, 0.815), rgba(255, 231, 17, 0.712)), url("../img/aboutus-hero_640.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.aboutus .section-heading {
+  color: #000000;
+  text-shadow: 1px 2px 2px #FFD700;
+}
+
+.aboutus__box {
+  margin: 1em 0;
+  -webkit-box-shadow: 5px 5px 10px #2e2e2e2e;
+          box-shadow: 5px 5px 10px #2e2e2e2e;
+  background-color: #ffff;
+  overflow: hidden;
+}
+
+.aboutus__box-img {
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.aboutus__box-img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.aboutus__box-info {
+  padding: 2em;
+}
+
+.aboutus__box-heading {
+  margin-bottom: 0.5em;
+  font-size: 2.4rem;
+}
+
+.aboutus__box-text {
+  margin: 0.5em;
+  font-size: 1.3rem;
+  margin-left: 0;
+}
+
+.aboutus__box-btn {
+  margin-top: 1em;
+  padding: 0.8em;
+  width: 100%;
+  color: #ffff;
+  background-color: #0028FF;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.aboutus__box-btn::before {
+  background-color: #3F5DFF;
+}
+
 @media (min-width: 576px) {
   .description__box {
     -webkit-box-orient: horizontal;
@@ -514,6 +579,41 @@ body {
   .description__img {
     margin-bottom: 0;
     max-height: 300px;
+  }
+  .aboutus__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 2em 0;
+    width: 100%;
+  }
+  .aboutus__box-img {
+    width: 50%;
+    height: auto;
+  }
+  .aboutus__box-img--right {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .aboutus__box-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .aboutus__box-heading {
+    margin-bottom: 0.5em;
+    font-size: 3rem;
+  }
+  .aboutus__box-btn {
+    padding: 1em;
   }
 }
 
@@ -612,6 +712,21 @@ body {
   .hero-img hr {
     width: 60%;
     max-width: 900px;
+  }
+  .aboutus {
+    background-image: linear-gradient(45deg, rgba(117, 116, 11, 0.815), rgba(255, 231, 17, 0.712)), url("../img/aboutus-hero_1920.jpg");
+  }
+  .aboutus__box-img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 300px;
+  }
+  .aboutus__box-text {
+    font-size: 1.5rem;
+  }
+  .aboutus__box-info {
+    background-color: #ffff;
+    z-index: 10;
   }
 }
 
