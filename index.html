@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quintessential&family=Roboto:wght@400;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/4612101c43.js" crossorigin="anonymous"></script>
 </head>
@@ -148,7 +149,7 @@
                             <button class="offers__card-info-btn btn-animation">Wybierz</button>
                         </div>
                     </div>
-                
+
                 </div>
             </div>
         </section>
@@ -163,29 +164,44 @@
                 <div class="aboutus__boxes">
 
                     <div class="aboutus__box">
-                        <img src="./img/aboutus1_640.jpg" alt="Pracownik ubrany w biały kombinezon podczas wydobywania miodu z ula" class="aboutus__box-img">
+                        <img src="./img/aboutus1_640.jpg"
+                            alt="Pracownik ubrany w biały kombinezon podczas wydobywania miodu z ula"
+                            class="aboutus__box-img">
                         <div class="aboutus__box-info">
                             <h3 class="aboutus__box-heading">Pasieka z centralnej Polski.</h3>
-                            <p class="aboutus__box-text">Jesteśmy prężnie działającą pasieką z okolic Radomia specjalizującą się w produkcji różnych rodzajów miodu.</p>
-                            <p class="aboutus__box-text">Nasze nastawienie na współpracę z pszczołami jest priorytetem, przez co te małe owady potrafią docenić wkład pracy i poświęcenie im dane poprzez płynną produkcję pysznego i wykwintnego miodu którym możemy się chwalić przed swoimi klientami.</p>
+                            <p class="aboutus__box-text">Jesteśmy prężnie działającą pasieką z okolic Radomia
+                                specjalizującą się w produkcji różnych rodzajów miodu.</p>
+                            <p class="aboutus__box-text">Nasze nastawienie na współpracę z pszczołami jest priorytetem,
+                                przez co te małe owady potrafią docenić wkład pracy i poświęcenie im dane poprzez płynną
+                                produkcję pysznego i wykwintnego miodu którym możemy się chwalić przed swoimi klientami.
+                            </p>
                             <button class="aboutus__box-btn btn-animation">Więcej</button>
                         </div>
                     </div>
                     <div class="aboutus__box">
-                        <img src="./img/aboutus2_640.jpg" alt="Dziewięć uli stojący na zielonym polu pośród kilku drzew" class="aboutus__box-img aboutus__box-img--right">
+                        <img src="./img/aboutus2_640.jpg" alt="Dziewięć uli stojący na zielonym polu pośród kilku drzew"
+                            class="aboutus__box-img aboutus__box-img--right">
                         <div class="aboutus__box-info">
                             <h3 class="aboutus__box-heading">Posiadamy rozbudowaną infrastrukturę.</h3>
-                            <p class="aboutus__box-text">W naszej pasiece na chwilę obecną możemy znaleźć 50 uli z wieloma pszczelimi rodzinami.</p>
-                            <p class="aboutus__box-text">Daje nam to szereg możliwości produkcji różnego rodzaju miodu nie zamykając się tym samym na jeden bądź kilka rodzajów pysznego produktu. Zajmujemy się również produkcją pszczelich pyłków które znajdą Państwo w naszej ofercie.</p>
+                            <p class="aboutus__box-text">W naszej pasiece na chwilę obecną możemy znaleźć 50 uli z
+                                wieloma pszczelimi rodzinami.</p>
+                            <p class="aboutus__box-text">Daje nam to szereg możliwości produkcji różnego rodzaju miodu
+                                nie zamykając się tym samym na jeden bądź kilka rodzajów pysznego produktu. Zajmujemy
+                                się również produkcją pszczelich pyłków które znajdą Państwo w naszej ofercie.</p>
                             <button class="aboutus__box-btn btn-animation">Więcej</button>
                         </div>
                     </div>
                     <div class="aboutus__box">
-                        <img src="./img/aboutus3_640.jpg" alt="Pszczelarz opróżniający plastry miody z ula" class="aboutus__box-img">
+                        <img src="./img/aboutus3_640.jpg" alt="Pszczelarz opróżniający plastry miody z ula"
+                            class="aboutus__box-img">
                         <div class="aboutus__box-info">
                             <h3 class="aboutus__box-heading">Kilka lat doświadczenia</h3>
                             <p class="aboutus__box-text">Od lat staramy się perfekcyjnie realizować swoje cele.</p>
-                            <p class="aboutus__box-text">Pasieka z Młynów jeszcze kilka lat wstecz była jedynie hobbystycznym zajęciem gdzie mogliśmy znaleźć jeden skromny ul. Z biegiem czasu powstawały nowe, a pasja i zaangażowanie doprowadziły nas do obecnej pozycji przez co dzisiaj możemy korzystać ze swoich doświadczeń aby wypełniać jeszcze lepiej swoje zadanie w dziedzinie produkcji pysznego miodu.</p>
+                            <p class="aboutus__box-text">Pasieka z Młynów jeszcze kilka lat wstecz była jedynie
+                                hobbystycznym zajęciem gdzie mogliśmy znaleźć jeden skromny ul. Z biegiem czasu
+                                powstawały nowe, a pasja i zaangażowanie doprowadziły nas do obecnej pozycji przez co
+                                dzisiaj możemy korzystać ze swoich doświadczeń aby wypełniać jeszcze lepiej swoje
+                                zadanie w dziedzinie produkcji pysznego miodu.</p>
                             <button class="aboutus__box-btn btn-animation">Więcej</button>
                         </div>
                     </div>
@@ -194,12 +210,61 @@
 
         </section>
 
+        <section id="reviews" class="reviews section section-padding white-section">
+            <h2 class="section-heading">opinie</h2>
+            <div class="wrapper">
+                <div class="reviews__boxes">
+
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="./img/reviews1_640.jpg" alt="Mścisław Koks" class="reviews__img">
+                        </div>
+                        <div class="reviews__box-info">
+                            <div class="reviews__box-quote"><i class="fas fa-quote-right"></i></div>
+                            <div class="reviews__box-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Beatae necessitatibus quasi quia fugiat? Aliquid expedita labore, autem quis nihil
+                                pariatur.</div>
+                            <strong>Mścisław Koks</strong>
+                        </div>
+                    </div>
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="./img/reviews2_640.jpg" alt="Hanka Mostowiak" class="reviews__img">
+                        </div>
+                        <div class="reviews__box-info">
+                            <div class="reviews__box-quote"><i class="fas fa-quote-right"></i></div>
+                            <div class="reviews__box-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Beatae necessitatibus quasi quia fugiat? Aliquid expedita labore, autem quis nihil
+                                pariatur.</div>
+                            <strong>Hanka Mostowiak</strong>
+                        </div>
+                    </div>
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="./img/reviews3_640.jpg" alt="Rozalia Kiepska" class="reviews__img">
+                        </div>
+                        <div class="reviews__box-info">
+                            <div class="reviews__box-quote"><i class="fas fa-quote-right"></i></div>
+                            <div class="reviews__box-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Beatae necessitatibus quasi quia fugiat? Aliquid expedita labore, autem quis nihil
+                                pariatur.</div>
+                            <strong>Rozalia Kiepska</strong>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
     </main>
 
 
 
 
-
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/slick.js"></script>
     <script src="./js/index.js"></script>
 </body>
 

@@ -110,6 +110,12 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+@media (max-width: 767px) {
+  .reviews.section-padding {
+    padding: 6em 0;
+  }
+}
+
 .burger-btn {
   position: fixed;
   top: 20px;
@@ -499,6 +505,7 @@ body {
 .aboutus .section-heading {
   color: #000000;
   text-shadow: 1px 2px 2px #FFD700;
+  font-weight: bold;
 }
 
 .aboutus__box {
@@ -550,6 +557,52 @@ body {
 
 .aboutus__box-btn::before {
   background-color: #3F5DFF;
+}
+
+.reviews__box {
+  position: relative;
+  margin: 2em;
+  padding: 2em;
+  border-radius: 8px;
+  -webkit-box-shadow: 3px 3px 10px #2e2e2e;
+          box-shadow: 3px 3px 10px #2e2e2e;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.reviews__box:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.reviews__box-img {
+  position: absolute;
+  top: 8%;
+  left: 75%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.reviews__box-img img {
+  width: 80px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.reviews__box-quote {
+  margin-bottom: 1em;
+  font-size: 3rem;
+  color: #FFD700;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+.reviews__box-text {
+  margin-bottom: 1em;
+  font-size: 1.4rem;
 }
 
 @media (min-width: 576px) {
@@ -726,7 +779,7 @@ body {
   }
   .aboutus__box-info {
     background-color: #ffff;
-    z-index: 10;
+    z-index: 2;
   }
 }
 
