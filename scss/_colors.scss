@@ -1,14 +1,14 @@
 $main-color: #FFD700;
 $secondary-color: #FFDF33;
 $text-color: #000000;
-$light-text-color: rgb(243, 235, 235);
+$light-text-color: rgba(65, 62, 62, 0.521);
 $white: #ffff;
 $brand-color: #0028FF;
 $brand-color-hover: #3F5DFF;
 
-
-$light-main-gradient: linear-gradient(315deg, #f39f86 0%, #f9d976 74%), #f39f86;
 $main-gradient: linear-gradient(45deg, rgba(117, 116, 11, 0.815), rgba(255, 231, 17, 0.712));
-$hard-main-gradient: linear-gradient(315deg, #f9484a 0%, #fbd72b 74%), #f9484a;
 $main-gradient-solid: linear-gradient(45deg, rgb(255, 251, 0), rgb(231, 216, 0));
-$light-main-gradient-solid: linear-gradient(315deg, #f5df2e 0%, #f07654 74%), #f5df2e;
+
+$light-main-gradient: linear-gradient(45deg, rgba(255, 251, 0, 0.89), rgba(231, 216, 0, 0.808));
+$hard-main-gradient: linear-gradient(45deg, rgba(255, 217, 0, 0.678), rgba(231, 208, 0, 0.87));
+$orange-main-gradient-solid: linear-gradient(45deg, rgba(229, 255, 0, 0.726), rgba(231, 131, 0, 0.63));

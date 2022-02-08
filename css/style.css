@@ -157,7 +157,7 @@ body {
   position: absolute;
   right: 0;
   height: 3px;
-  content: '';
+  content: "";
   background-color: #000000;
   -webkit-transition: width 0.5s;
   transition: width 0.5s;
@@ -207,7 +207,7 @@ body {
   left: 0;
   width: 3px;
   height: 100%;
-  content: '';
+  content: "";
   background-color: #000000;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
@@ -301,7 +301,7 @@ body {
 
 .header__btn::before {
   color: #ffff;
-  background-color: #f3ebeb;
+  background-color: rgba(65, 62, 62, 0.521);
 }
 
 .description__box {
@@ -349,6 +349,142 @@ body {
 
 .hero-img__text {
   padding: 1em 0;
+}
+
+.offers__card {
+  position: relative;
+  margin: 1em 0;
+  height: 450px;
+  color: #000000;
+  text-align: center;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.offers__card:hover .offers__card-img {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  opacity: 0;
+}
+
+.offers__card:hover .offers__card-info {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+  opacity: 1;
+}
+
+.offers__card-img {
+  padding: 2em;
+  height: 100%;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+}
+
+.offers__card-img--first {
+  background-image: linear-gradient(45deg, rgba(255, 251, 0, 0.89), rgba(231, 216, 0, 0.808)), url("../img/offers1_640.jpg");
+}
+
+.offers__card-img--second {
+  background-image: linear-gradient(45deg, rgba(255, 217, 0, 0.678), rgba(231, 208, 0, 0.87)), url("../img/offers2_640.jpg");
+}
+
+.offers__card-img--third {
+  background-image: linear-gradient(45deg, rgba(229, 255, 0, 0.726), rgba(231, 131, 0, 0.63)), url("../img/offers3_640.jpg");
+}
+
+.offers__card-img-title {
+  font-family: "Quintessential", cursive;
+  font-size: 2.8rem;
+}
+
+.offers__card-img-info {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.offers__card-img-info i {
+  margin-right: 0.5em;
+  font-size: 2rem;
+}
+
+.offers__card-info {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: linear-gradient(45deg, #fffb00, #e7d800);
+  border-radius: 15px;
+  opacity: 0;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+}
+
+.offers__card-info-title {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 1.2em;
+  margin-bottom: 1em;
+  font-family: "Quintessential", cursive;
+  font-size: 1.8rem;
+}
+
+.offers__card-info-list {
+  margin: 0 auto;
+  width: 70%;
+  list-style: none;
+}
+
+.offers__card-info-list-item {
+  padding: 1em;
+  font-size: 1.4rem;
+  border-bottom: 1px solid rgba(65, 62, 62, 0.521);
+}
+
+.offers__card-info-list-item:last-child {
+  border-bottom: none;
+}
+
+.offers__card-info-btn {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 2em;
+  padding: 1em;
+  border-radius: 15px;
+  border: none;
+  background-color: #0028FF;
+  color: #ffff;
+  cursor: pointer;
+}
+
+.offers__card-info-btn::before {
+  background-color: #3F5DFF;
 }
 
 @media (min-width: 576px) {
@@ -411,6 +547,23 @@ body {
   .hero-img__text {
     font-size: 2.2rem;
   }
+  .offers__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .offers__card {
+    margin: 1em;
+    width: 45%;
+  }
+  .offers__card-info-title {
+    font-size: 2.2rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -459,6 +612,12 @@ body {
   .hero-img hr {
     width: 60%;
     max-width: 900px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .offers__card {
+    width: 30%;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,15 +1,21 @@
 @mixin burgerBtnSet {
-    position: absolute;
-    right: 0;
-    height: 3px;
-    content: '';
-    background-color: $text-color;
-    transition: width 0.5s;
+	position: absolute;
+	right: 0;
+	height: 3px;
+	content: "";
+	background-color: $text-color;
+	transition: width 0.5s;
 }
 
-@mixin heroImages($heroImg){
-    background-image: $main-gradient, url($heroImg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+@mixin heroImages($heroImg) {
+	background-image: $main-gradient, url($heroImg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+@mixin positionCenter {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 }

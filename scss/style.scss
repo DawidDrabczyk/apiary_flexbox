@@ -73,62 +73,62 @@ body {
 //                 NAV                       //
 ///////////////////////////////////////////////
 
-.nav{
-    position: fixed;
-    top: 0;
-    height: 100vh;
-    width: 100%;
-    background-image: $main-gradient-solid;
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(100%);
-    transition: 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.nav {
+	position: fixed;
+	top: 0;
+	height: 100vh;
+	width: 100%;
+	background-image: $main-gradient-solid;
+	z-index: 10;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: translateX(100%);
+	transition: 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-    &--active{
-        transform: translateX(0);
-    }
+	&--active {
+		transform: translateX(0);
+	}
 
-    &__item{
-        position: relative;
-        display: block;
-        margin: 0.5em 0;
-        padding: 0.5em 2em;
-        font-size: 2.8rem;
-        color: $text-color;
-        text-decoration: none;
-        text-transform: uppercase;
+	&__item {
+		position: relative;
+		display: block;
+		margin: 0.5em 0;
+		padding: 0.5em 2em;
+		font-size: 2.8rem;
+		color: $text-color;
+		text-decoration: none;
+		text-transform: uppercase;
 
-        &::before{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 3px;
-            height: 100%;
-            content: '';
-            background-color: $text-color;
-            transform: scaleY(0);
-            transition: transform 0.5s;
-        }
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 3px;
+			height: 100%;
+			content: "";
+			background-color: $text-color;
+			transform: scaleY(0);
+			transition: transform 0.5s;
+		}
 
-        &:hover::before{
-            transform: scaleY(1);
-        }
-    }
+		&:hover::before {
+			transform: scaleY(1);
+		}
+	}
 }
 
-.navItemAnimation{
-    animation: navAnimation 1s both;
+.navItemAnimation {
+	animation: navAnimation 1s both;
 }
 
 @keyframes navAnimation {
-    from{
-        transform: translateX(200%);
-    }
-    to{
-        transform: translateX(0);
-    }
+	from {
+		transform: translateX(200%);
+	}
+	to {
+		transform: translateX(0);
+	}
 }
 
 ///////////////////////////////////////////////
@@ -150,75 +150,191 @@ body {
 
 	&__heading {
 		font-family: "Quintessential", cursive;
-        font-size: 4.8rem;
-        letter-spacing: 4px;
+		font-size: 4.8rem;
+		letter-spacing: 4px;
 	}
-    &__text{
-        margin-top: 1em;
-        font-size: 1.4rem;
-    }
-    &__btn{
-        margin-top: 2em;
-        padding: 0.8em 1.6em;
-        font-size: 1.4rem;
-        background-color: $white;
-        border: none;
-        border-radius: 15px;
-        color: $text-color;
-        text-decoration: none;
-        text-transform: uppercase;
-        cursor: pointer;
+	&__text {
+		margin-top: 1em;
+		font-size: 1.4rem;
+	}
+	&__btn {
+		margin-top: 2em;
+		padding: 0.8em 1.6em;
+		font-size: 1.4rem;
+		background-color: $white;
+		border: none;
+		border-radius: 15px;
+		color: $text-color;
+		text-decoration: none;
+		text-transform: uppercase;
+		cursor: pointer;
 
-        &::before{
-            color: $white;
-            background-color: $light-text-color;
-        }
-    }
+		&::before {
+			color: $white;
+			background-color: $light-text-color;
+		}
+	}
 }
 
 ///////////////////////////////////////////////
 //                 DESCRIPTION               //
 ///////////////////////////////////////////////
 
-.description{
-    &__box{
-        display: flex;
-        flex-direction: column;
-        margin: 2em 0;
-    }
-    &__img{
-        width: 100%;
-        margin-bottom: 1em;
-    }
-    &__title{
-        margin-bottom: 0.5em;
-    }
-    &__text{
-        font-size: 1.4rem;
-    }
+.description {
+	&__box {
+		display: flex;
+		flex-direction: column;
+		margin: 2em 0;
+	}
+	&__img {
+		width: 100%;
+		margin-bottom: 1em;
+	}
+	&__title {
+		margin-bottom: 0.5em;
+	}
+	&__text {
+		font-size: 1.4rem;
+	}
 }
 
 ///////////////////////////////////////////////
 //                 HERO-IMG                  //
 ///////////////////////////////////////////////
 
-.hero-img{
-    position: relative;
-    padding: 10em 2em;
-    @include heroImages('../img/hero-img_640.jpg');
-    text-align: center;
-    color: $text-color;
-    overflow: hidden;
+.hero-img {
+	position: relative;
+	padding: 10em 2em;
+	@include heroImages("../img/hero-img_640.jpg");
+	text-align: center;
+	color: $text-color;
+	overflow: hidden;
 
-    &__title{
+	&__title {
+		font-family: "Quintessential", cursive;
+		font-size: 4.8rem;
+		letter-spacing: 4px;
+		margin-bottom: 0.5em;
+	}
+
+	&__text {
+		padding: 1em 0;
+	}
+}
+
+///////////////////////////////////////////////
+//                 OFFERS                    //
+///////////////////////////////////////////////
+
+.offers {
+	&__card {
+		position: relative;
+		margin: 1em 0;
+		height: 450px;
+		color: $text-color;
+		text-align: center;
+		perspective: 1000px;
+
+		&:hover {
+			.offers__card-img {
+				transform: rotateY(-180deg);
+				opacity: 0;
+			}
+			.offers__card-info {
+				transform: rotateY(0);
+				opacity: 1;
+			}
+		}
+	}
+
+	&__card-img {
+		padding: 2em;
+		height: 100%;
+		border-radius: 15px;
+		background-size: cover;
+		background-position: center;
+		transition: transform 1s, opacity 1s;
+
+		&--first {
+			background-image: $light-main-gradient, url("../img/offers1_640.jpg");
+		}
+
+		&--second {
+			background-image: $hard-main-gradient, url("../img/offers2_640.jpg");
+		}
+
+		&--third {
+			background-image: $orange-main-gradient-solid,
+				url("../img/offers3_640.jpg");
+		}
+	}
+
+	&__card-img-title {
+		font-family: "Quintessential", cursive;
+		font-size: 2.8rem;
+	}
+	&__card-img-info {
+		position: absolute;
+		bottom: 30px;
+		right: 30px;
+		font-size: 1.8rem;
+		font-weight: bold;
+
+		i {
+			margin-right: 0.5em;
+			font-size: 2rem;
+		}
+	}
+
+	&__card-info {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-image: $main-gradient-solid;
+		border-radius: 15px;
+		opacity: 0;
+		transform: rotateY(180deg);
+		transition: transform 1s, opacity 1s;
+	}
+	&__card-info-title {
+		@include positionCenter;
+		top: 1.2em;
+        margin-bottom: 1em;
         font-family: "Quintessential", cursive;
-        font-size: 4.8rem;
-        letter-spacing: 4px;
-        margin-bottom: 0.5em;
+		font-size: 1.8rem;
+	}
+    &__card-info-list{
+        margin: 0 auto;
+        width: 70%;
+        list-style: none;
     }
+    &__card-info-list-item{
+        padding: 1em;
+        font-size: 1.4rem;
+        border-bottom: 1px solid $light-text-color;
 
-    &__text{
-        padding: 1em 0;
+        &:last-child{
+            border-bottom: none;
+        }
+    }
+    &__card-info-btn{
+        @include positionCenter;
+        bottom: 2em;
+        padding: 1em;
+        border-radius: 15px;
+        border: none;
+        background-color: $brand-color;
+        color: $white;
+        cursor: pointer;
+
+        &::before{
+            background-color: $brand-color-hover;
+        }
     }
 }
 
@@ -226,115 +342,137 @@ body {
 //                 MEDIA                     //
 ///////////////////////////////////////////////
 
-@media(min-width:576px){
-    .description{
-        &__box{
-            flex-direction: row;
-            justify-content: space-between;
-        }
-        &__box-text{
-            width: 55%;
+@media (min-width: 576px) {
+	.description {
+		&__box {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		&__box-text {
+			width: 55%;
 
-            &--right{
-                text-align: right;
-            }
-        }
-        &__box-img{
-            width: 40%;
+			&--right {
+				text-align: right;
+			}
+		}
+		&__box-img {
+			width: 40%;
 
-            &--right{
-                order: 1;
-            }
-        }
-        &__img{
-            margin-bottom: 0;
-            max-height: 300px;
-        }
-    }
+			&--right {
+				order: 1;
+			}
+		}
+		&__img {
+			margin-bottom: 0;
+			max-height: 300px;
+		}
+	}
 }
 
-@media(min-width:768px){
-    .white-block{
-        height: 50px;
-        width: 50%;
-    }
-    .header{
-        &__heading{
-            font-size: 6.6rem;
-        }
-        &__text{
-            font-size: 2.4rem;
-        }
-        &__btn{
-            font-size: 1.6rem;
-        }
-    }
-    .description{
-        &__title{
-            font-size: 2.5rem;
-        }
-        &__text{
-            font-size: 1.8rem;
-        }
-    }
-    .hero-img{
-        padding: 30rem 2em;
+@media (min-width: 768px) {
+	.white-block {
+		height: 50px;
+		width: 50%;
+	}
+	.header {
+		&__heading {
+			font-size: 6.6rem;
+		}
+		&__text {
+			font-size: 2.4rem;
+		}
+		&__btn {
+			font-size: 1.6rem;
+		}
+	}
+	.description {
+		&__title {
+			font-size: 2.5rem;
+		}
+		&__text {
+			font-size: 1.8rem;
+		}
+	}
+	.hero-img {
+		padding: 30rem 2em;
 
-        hr{
-            margin: 0 auto;
-            width: 70%;
-        }
+		hr {
+			margin: 0 auto;
+			width: 70%;
+		}
 
-        &__text{
-            font-size: 2.2rem;
-        }
-    }
-}
-
-@media(min-width:992px){
-    .burger-btn{
-        top: 50px;
-        right: 50px;
-    }
-    .nav{
-        &__item{
-            font-size: 4.8rem;
-        }
-    }
-    .header{
-        background-image: $main-gradient, url('../img/header-hero_1920.jpg');
-
-        &__heading{
-            font-size: 8rem;
-        }
-    }
-    .description{
-        &__box{
-            margin: 5em 0;
-        }
-        &__box-text{
+		&__text {
+			font-size: 2.2rem;
+		}
+	}
+    .offers{
+        &__cards{
             display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            margin-bottom: 2.5em;
+            justify-content: center;
+            flex-wrap: wrap;
         }
-        &__title{
-            font-size: 3.6rem;
+        &__card{
+            margin: 1em;
+            width: 45%;
         }
-        &__text{
+        &__card-info-title{
             font-size: 2.2rem;
         }
     }
-    .hero-img{
-        padding: 40rem 2em;
-        background-image: $main-gradient, url('../img/hero-img_1920.jpg');
+}
 
-        &__title{
-            font-size: 7.2rem;
-        }
-        hr{
-            width: 60%;
-            max-width: 900px;
+@media (min-width: 992px) {
+	.burger-btn {
+		top: 50px;
+		right: 50px;
+	}
+	.nav {
+		&__item {
+			font-size: 4.8rem;
+		}
+	}
+	.header {
+		background-image: $main-gradient, url("../img/header-hero_1920.jpg");
+
+		&__heading {
+			font-size: 8rem;
+		}
+	}
+	.description {
+		&__box {
+			margin: 5em 0;
+		}
+		&__box-text {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			margin-bottom: 2.5em;
+		}
+		&__title {
+			font-size: 3.6rem;
+		}
+		&__text {
+			font-size: 2.2rem;
+		}
+	}
+	.hero-img {
+		padding: 40rem 2em;
+		background-image: $main-gradient, url("../img/hero-img_1920.jpg");
+
+		&__title {
+			font-size: 7.2rem;
+		}
+		hr {
+			width: 60%;
+			max-width: 900px;
+		}
+	}
+}
+
+@media(min-width:1100px){
+    .offers{
+        &__card{
+            width: 30%;
         }
     }
 }
