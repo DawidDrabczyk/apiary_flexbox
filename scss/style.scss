@@ -412,6 +412,7 @@ body {
         padding: 2em;
         border-radius: 8px;
         box-shadow: 3px 3px 10px #2e2e2e;
+        height: 300px;
         transition: transform 0.5s;
 
         &:hover{
@@ -441,6 +442,55 @@ body {
         margin-bottom: 1em;
         font-size: 1.4rem;
     }
+}
+
+///////////////////////////////////////////////
+//                 CONTACT                   //
+///////////////////////////////////////////////
+
+.contact{
+	position: relative;
+	background-color: $light-text-color;
+	overflow: hidden;
+
+	.white-block-left{
+		background-color: $text-color;
+	}
+
+	&__form,
+	&__form-top{
+		display: flex;
+		flex-direction: column;
+	}
+	&__form-label{
+		margin-bottom: 0.5em;
+		text-transform: uppercase;
+	}
+	&__form-input{
+		@include formSet;
+	}
+	&__form-textarea{
+		@include formSet;
+		max-width: 100%;
+		min-width: 100%;
+		width: 100%;
+		min-height: 150px;
+	}
+	&__form-btn{
+		align-self: flex-end;
+		padding: 1em;
+		width: 100%;
+		max-width: 300px;
+		color: $white;
+		border: none;
+		border-radius: 15px;
+		background-color: $brand-color;
+		cursor: pointer;
+
+		&::before{
+			background-color: $brand-color-hover
+		}
+	}
 }
 
 ///////////////////////////////////////////////
