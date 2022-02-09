@@ -18,10 +18,10 @@ body {
 	font-family: "Roboto", sans-serif;
 }
 
-@media(max-width:767px){
-    .reviews.section-padding{
-        padding: 6em 0;
-    }
+@media (max-width: 767px) {
+	.reviews.section-padding {
+		padding: 6em 0;
+	}
 }
 
 ///////////////////////////////////////////////
@@ -310,173 +310,173 @@ body {
 	&__card-info-title {
 		@include positionCenter;
 		top: 1.2em;
-        margin-bottom: 1em;
-        font-family: "Quintessential", cursive;
+		margin-bottom: 1em;
+		font-family: "Quintessential", cursive;
 		font-size: 1.8rem;
 	}
-    &__card-info-list{
-        margin: 0 auto;
-        width: 70%;
-        list-style: none;
-    }
-    &__card-info-list-item{
-        padding: 1em;
-        font-size: 1.4rem;
-        border-bottom: 1px solid $light-text-color;
+	&__card-info-list {
+		margin: 0 auto;
+		width: 70%;
+		list-style: none;
+	}
+	&__card-info-list-item {
+		padding: 1em;
+		font-size: 1.4rem;
+		border-bottom: 1px solid $light-text-color;
 
-        &:last-child{
-            border-bottom: none;
-        }
-    }
-    &__card-info-btn{
-        @include positionCenter;
-        bottom: 2em;
-        padding: 1em;
-        border-radius: 15px;
-        border: none;
-        background-color: $brand-color;
-        color: $white;
-        cursor: pointer;
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+	&__card-info-btn {
+		@include positionCenter;
+		bottom: 2em;
+		padding: 1em;
+		border-radius: 15px;
+		border: none;
+		background-color: $brand-color;
+		color: $white;
+		cursor: pointer;
 
-        &::before{
-            background-color: $brand-color-hover;
-        }
-    }
+		&::before {
+			background-color: $brand-color-hover;
+		}
+	}
 }
 
 ///////////////////////////////////////////////
 //                 ABOUTUS                   //
 ///////////////////////////////////////////////
 
-.aboutus{
-    position: relative;
-    overflow: hidden;
-    @include heroImages("../img/aboutus-hero_640.jpg");
+.aboutus {
+	position: relative;
+	overflow: hidden;
+	@include heroImages("../img/aboutus-hero_640.jpg");
 
-    .section-heading{
-        color:$text-color;
-        text-shadow: 1px 2px 2px $main-color;
-        font-weight: bold;
-    }
+	.section-heading {
+		color: $text-color;
+		text-shadow: 1px 2px 2px $main-color;
+		font-weight: bold;
+	}
 
-    &__box{
-        margin: 1em 0;
-        box-shadow: 5px 5px 10px #2e2e2e2e;
-        background-color: $white;
-        overflow: hidden;
-    }
-    &__box-img{
-        width: 100%;
-        transition: transform 0.5s;
+	&__box {
+		margin: 1em 0;
+		box-shadow: 5px 5px 10px #2e2e2e2e;
+		background-color: $white;
+		overflow: hidden;
+	}
+	&__box-img {
+		width: 100%;
+		transition: transform 0.5s;
 
-        &:hover{
-            transform: scale(1.1);
-        }
-    }
-    &__box-info{
-        padding: 2em;
-    }
-    &__box-heading{
-        margin-bottom: 0.5em;
-        font-size: 2.4rem;
-    }
-    &__box-text{
-        margin: 0.5em;
-        font-size: 1.3rem;
-        margin-left: 0;
-    }
-    &__box-btn{
-        margin-top: 1em;
-        padding: 0.8em;
-        width: 100%;
-        color: $white;
-        background-color: $brand-color;
-        border: none;
-        border-radius: 15px;
-        cursor: pointer;
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+	&__box-info {
+		padding: 2em;
+	}
+	&__box-heading {
+		margin-bottom: 0.5em;
+		font-size: 2.4rem;
+	}
+	&__box-text {
+		margin: 0.5em;
+		font-size: 1.3rem;
+		margin-left: 0;
+	}
+	&__box-btn {
+		margin-top: 1em;
+		padding: 0.8em;
+		width: 100%;
+		color: $white;
+		background-color: $brand-color;
+		border: none;
+		border-radius: 15px;
+		cursor: pointer;
 
-        &::before{
-            background-color: $brand-color-hover;
-        }
-    }
+		&::before {
+			background-color: $brand-color-hover;
+		}
+	}
 }
 
 ///////////////////////////////////////////////
 //                 REVIEWS                   //
 ///////////////////////////////////////////////
 
-.reviews{
-    &__box{
-        position: relative;
-        margin: 2em;
-        padding: 2em;
-        border-radius: 8px;
-        box-shadow: 3px 3px 10px #2e2e2e;
-        height: 300px;
-        transition: transform 0.5s;
+.reviews {
+	&__box {
+		position: relative;
+		margin: 2em;
+		padding: 2em;
+		border-radius: 8px;
+		box-shadow: 3px 3px 10px #2e2e2e;
+		height: 300px;
+		transition: transform 0.5s;
 
-        &:hover{
-            transform: scale(0.95);
-        }
-    }
-    &__box-img{
-        position: absolute;
-        top: 8%;
-        left: 75%;
-        transform: translate(-50%, -50%);
+		&:hover {
+			transform: scale(0.95);
+		}
+	}
+	&__box-img {
+		position: absolute;
+		top: 8%;
+		left: 75%;
+		transform: translate(-50%, -50%);
 
-        img{
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-    }
-    &__box-quote{
-        margin-bottom: 1em;
-        font-size: 3rem;
-        color: $main-color;
-        text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.6);
-    }
-    &__box-text{
-        margin-bottom: 1em;
-        font-size: 1.4rem;
-    }
+		img {
+			width: 80px;
+			height: 80px;
+			object-fit: cover;
+			border-radius: 50%;
+		}
+	}
+	&__box-quote {
+		margin-bottom: 1em;
+		font-size: 3rem;
+		color: $main-color;
+		text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.6);
+	}
+	&__box-text {
+		margin-bottom: 1em;
+		font-size: 1.4rem;
+	}
 }
 
 ///////////////////////////////////////////////
 //                 CONTACT                   //
 ///////////////////////////////////////////////
 
-.contact{
+.contact {
 	position: relative;
 	background-color: $light-text-color;
 	overflow: hidden;
 
-	.white-block-left{
+	.white-block-left {
 		background-color: $text-color;
 	}
 
 	&__form,
-	&__form-top{
+	&__form-top {
 		display: flex;
 		flex-direction: column;
 	}
-	&__form-label{
+	&__form-label {
 		margin-bottom: 0.5em;
 		text-transform: uppercase;
 	}
-	&__form-input{
+	&__form-input {
 		@include formSet;
 	}
-	&__form-textarea{
+	&__form-textarea {
 		@include formSet;
 		max-width: 100%;
 		min-width: 100%;
 		width: 100%;
 		min-height: 150px;
 	}
-	&__form-btn{
+	&__form-btn {
 		align-self: flex-end;
 		padding: 1em;
 		width: 100%;
@@ -487,9 +487,68 @@ body {
 		background-color: $brand-color;
 		cursor: pointer;
 
-		&::before{
-			background-color: $brand-color-hover
+		&::before {
+			background-color: $brand-color-hover;
 		}
+	}
+}
+
+///////////////////////////////////////////////
+//                 FOOTER                    //
+///////////////////////////////////////////////
+
+.footer {
+	color: $white;
+	background-color: $text-color;
+
+	.wrapper {
+		padding: 6em 2em 2em;
+	}
+
+	&__box {
+		font-size: 1.4rem;
+	}
+	&__box-desktop {
+		display: none;
+	}
+	&__box-title {
+		margin-bottom: 1em;
+		font-size: 3rem;
+		text-transform: uppercase;
+	}
+	&__span {
+		text-transform: lowercase;
+	}
+	&__box-title-icon {
+		color: $main-color;
+	}
+	&__box-social {
+		margin: 1em 0 1em;
+		text-align: center;
+	}
+	&__box-link {
+		padding: 0 0.3em;
+		font-size: 3.6rem;
+		color: $white;
+		text-decoration: none;
+		transition: color 0.5s;
+
+		&:hover{
+			color: $main-color;
+		}
+		&:first-child{
+			padding-left: 0;
+		}
+	}
+	&__box-text{
+		text-align: center;
+	}
+	&__bottom-text{
+		padding: 2em;
+		text-align: center;
+	}
+	&__copy{
+		font-size: 2.2rem;
 	}
 }
 
@@ -522,33 +581,33 @@ body {
 			max-height: 300px;
 		}
 	}
-    .aboutus{
-        &__box{
-            display: flex;
-            margin: 2em 0;
-            width: 100%;
-        }
-        &__box-img{
-            width: 50%;
-            height: auto;
+	.aboutus {
+		&__box {
+			display: flex;
+			margin: 2em 0;
+			width: 100%;
+		}
+		&__box-img {
+			width: 50%;
+			height: auto;
 
-            &--right{
-                order: 1;
-            }
-        }
-        &__box-info{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        &__box-heading{
-            margin-bottom: 0.5em;
-            font-size: 3rem;
-        }
-        &__box-btn{
-            padding: 1em;
-        }
-    }
+			&--right {
+				order: 1;
+			}
+		}
+		&__box-info {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		&__box-heading {
+			margin-bottom: 0.5em;
+			font-size: 3rem;
+		}
+		&__box-btn {
+			padding: 1em;
+		}
+	}
 }
 
 @media (min-width: 768px) {
@@ -587,20 +646,51 @@ body {
 			font-size: 2.2rem;
 		}
 	}
-    .offers{
-        &__cards{
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        &__card{
-            margin: 1em;
-            width: 45%;
-        }
-        &__card-info-title{
-            font-size: 2.2rem;
-        }
-    }
+	.offers {
+		&__cards {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		&__card {
+			margin: 1em;
+			width: 45%;
+		}
+		&__card-info-title {
+			font-size: 2.2rem;
+		}
+	}
+	.footer{
+		&__boxes{
+			display: flex;
+			justify-content: space-between;
+		}
+		&__box-desktop{
+			display: block;
+		}
+		&__box{
+			margin: 0 2em;
+			width: 25%;
+
+			&:first-child{
+				width: 50%;
+			}
+		}
+		&__box-title{
+			font-size: 2.4rem;
+		}
+		&__box-list{
+			list-style: none;
+		}
+		&__box-list-item{
+			margin-bottom: 1em;
+
+			a{
+				color: $white;
+				text-decoration: none;
+			}
+		}
+	}
 }
 
 @media (min-width: 992px) {
@@ -649,27 +739,27 @@ body {
 			max-width: 900px;
 		}
 	}
-    .aboutus{
-        background-image:$main-gradient, url("../img/aboutus-hero_1920.jpg");
+	.aboutus {
+		background-image: $main-gradient, url("../img/aboutus-hero_1920.jpg");
 
-        &__box-img{
-            object-fit: cover;
-            height: 300px;
-        }
-        &__box-text{
-            font-size: 1.5rem;
-        }
-        &__box-info{
-            background-color: $white;
-            z-index: 2;
-        }
-    }
+		&__box-img {
+			object-fit: cover;
+			height: 300px;
+		}
+		&__box-text {
+			font-size: 1.5rem;
+		}
+		&__box-info {
+			background-color: $white;
+			z-index: 2;
+		}
+	}
 }
 
-@media(min-width:1100px){
-    .offers{
-        &__card{
-            width: 30%;
-        }
-    }
+@media (min-width: 1100px) {
+	.offers {
+		&__card {
+			width: 30%;
+		}
+	}
 }
